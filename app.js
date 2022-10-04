@@ -11,7 +11,7 @@ const usersApiRouter = require('./routes/usersApiRoutes');
 const manage404 = require('./middlewares/error404');
 
 const app = express()
-const port = 3000
+const port = 5000;
 
 // Permite leer el body recibido en una petición
 app.use(express.json());
