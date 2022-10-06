@@ -36,11 +36,11 @@ const Home = () => {
     //cogemos datos del fetch y los pintamos
     (home.length !== 0 
         ? <div>
-            <img src={home.url} alt={home.title} />
+            <img src={home.url} alt={home.title} width={'1000px'} />
             <h2>{home.title}</h2>
-            <p>{home.date}</p>
+            <p>Date: {home.date}</p>
             <p>{home.explanation}</p>
-            <p>{home.copyright}</p>
+            <p>Copyrigth: {home.copyright}</p>
         </div>
         : null)
   )
