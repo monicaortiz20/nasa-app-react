@@ -23,32 +23,50 @@ const Landing = () => {
         try {
             if (landings.length === 0) {
                 const { data } = await axios.get(`http://localhost:5000/api/astronomy/landings`);
-                // console.log(data);
-                //sacamos objeto con la info a pintar
                 //data es del destructuring del fetch
-                const newLanding = {
-                    name: data.name,
-                    id: data.id,
-                    nametype: data.nametype,
-                    recclass: data.recclass,
-                    mass: data.mass,
-                    fall: data.fall,
-                    year: data.year,
-                    reclat: data.reclat,
-                    relong: data.relong,
-                    geolocation: data.geolocation,
-                }
                 setLandings(data) //seteamos el estado con 'data' del fetch 
             }
-
+            
         } catch (error) {
             console.log(error)
         }
 
     }
 
+
+    //SEARCH LANDINGS:
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        const select = e.target.by.value;
+        const option = e.target.option.value;
+        const mayusOption = option.toUpperCase();
+        setOption(mayusOption);
+        setSelect(select);
+    
+        e.target.option.value="";
+    
+      }
+
+
     return (
         <>
+         <div>
+          <h4>Search landings!</h4>
+          <form onSubmit={handleSubmit}>
+            <select name="by">
+                <menuitem value="mass">By weight</menuitem>
+                <menuitem value="class">By class</menuitem>
+            </select>
+            <TextField id="outlined-basic" label={select} variant="outlined" name="option"/>
+            <button variant="outlined" type="submit">Submit</button>
+          </form>
+        </div>
+
+        <div>
+          <h4>Check all landings</h4>
+          <button variant="outlined" onClick={handleClick}>List</button>
+        </div>
+
             <MapContainer center={[51.505, -0.09]} zoom={4} scrollWheelZoom={true} style={{ width: '100%', height: '500px' }}>
                 <TileLayer
                     attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>"
@@ -62,6 +80,8 @@ const Landing = () => {
                             <ul>
                                 <li><h3>{landData.name}</h3></li>
                                 <li><p>ID: {landData.id}</p></li>
+                                <li><p>Nametype: {landData.nametype}</p></li>
+                                <li><p>Reclass: {landData.recclass}</p></li>
                                 <li><p>Mass: {landData.mass}</p></li>
                                 <li><p>Year: {landData.year}</p></li>
                             </ul>                    

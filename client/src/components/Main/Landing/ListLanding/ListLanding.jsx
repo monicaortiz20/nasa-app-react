@@ -1,14 +1,40 @@
-import React from 'react';
-// import axios from 'axios';
-// import { v4 as uuidv4 } from 'uuid';
+import React, { useState, useContext } from 'react';
+import { landingContext } from '../../../../context/landingContext';
 
 const ListLanding = (data) => {
+  const { dataLands, setdataLands} = useContext(landingContext)
 //recibimos por props la info a pintar : 'data' del padre data={lanData}
   
-  const geoData = data.data.geolocation;
-  // const longitude = data.data.geolocation.longitude;
-  // console.log(latitude, longitude)
-  // console.log(geoData)
+//funciones propias del componente: - método .sort
+
+//búsqueda por nombre 
+function handleName() {
+  const orderNames = [...dataLands].sort((a, b) => {
+    return a.name > b.name ? 1 : -1 })
+    setdataLands(orderNames);
+}
+
+
+//búsqueda por masa
+function handleMass() {
+  const orderMass = [...dataLands].sort((a,b) => {
+    return a.mass > b.mass ? 1: -1 })
+  setdataLands(orderMass);
+}
+
+//búsqueda por año
+function handleYear() {
+  const orderYear = [...dataLands].sort((a,b)=> {
+    return a.year > b.year ? 1 : -1 })
+  setdataLands(orderYear);
+}
+
+// //eliminar landing
+// const deleteLanding = (i) => {
+//   const remainingLands = dataLands.filter((j, x) => i !== x)
+//   setdataLands(remainingLands);
+// }
+
 
 
   return (
@@ -23,9 +49,7 @@ const ListLanding = (data) => {
             <p>fall: {data.data.fall}</p>
             <p>year: {data.data.year}</p>
             <p>reclat: {data.data.reclat}</p>
-            <p>relong: {data.data.relong}</p>
-            <p>latitude: {geoData[0]}</p>
-            <p>longitude: {geoData[1]}</p> 
+            <p>relong: {data.data.relong}</p> 
         </div>
         : null)
   )
