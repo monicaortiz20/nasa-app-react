@@ -110,7 +110,11 @@ const createNewLanding = async (req, res) => {
 //UPDATE Landing (object)
 const updateLanding = async (req, res) => {
     try {
-        await Landing.upDateLandings(req.body);
+        const obj = {
+            body: req.body,
+            id: req.params.id
+        }
+        await Landing.upDateLandings(obj);
         console.log("Esto es req.body de la func UPDATE", req.body);
         res.send("Landing updated!");
 
