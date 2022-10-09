@@ -43,7 +43,7 @@ const CardLanding = (data) => {
       //hacemos fetch y pasamos obj editado:
       const response = await axios.put(`http://localhost:5000/api/astronomy/landings/update/${landing.id}`, editLandObj)
       const info = response.data;
-
+      console.log('esto es info de edit', info)
 
     } catch (error) {
       console.log(error)
