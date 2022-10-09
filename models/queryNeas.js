@@ -5,7 +5,7 @@ const neas = require('../schemas/neas');
 //para coger todas las neas:
 const getAllNeas = async () => {
     try{
-        const getNeas = await neas.find({});
+        const getNeas = await neas.find({}, "-_id");
         console.log("query de allNeas")
         return getNeas
     }
@@ -98,7 +98,7 @@ const upDateNeas = async(updateNea) => {
             "moid_au": updateNea.moid_au,
             "q_au_1": updateNea.q_au_1,
             "q_au_2": updateNea.q_au_2,
-            "period_yr": updateNea.reclat,
+            "period_yr": updateNea.period_yr,
             "i_deg": updateNea.i_deg,
             "pha": updateNea.pha,
             "orbit_class": updateNea.orbit_class
