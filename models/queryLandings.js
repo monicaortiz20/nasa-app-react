@@ -112,28 +112,14 @@ const createLanding = async (newLanding) => {
 //--------- Función Query para el PUT ----------//
 const upDateLandings = async(landing) => {
     try {
-        const newLand = {
-            "id": landing.id,
-            "name": landing.name,
-            "nametype": landing.nametype,
-            "recclass": landing.recclass,
-            "mass": landing.mass,
-            "fall": landing.fall,
-            "year": landing.year,
-            "reclat": landing.reclat,
-            "reclong": landing.reclong,
-            "geolocation": landing.geolocation
-        }
+        const newLand = Landing(landing.body)
         //buscamos la landing a modificar por ID
-        let oldLand = await Landing.findOneAndUpdate({id: landing.id}, newLand);
+        let oldLand = await Landing.findOne({id: landing.id});
+        console.log('*********esto es oldLand', oldLand)
         //para sobreescribir la existente:
         oldLand.overwrite(newLand);
         //para guardar la sobreescrita:
         await oldLand.save();
-        return {
-            Objective: "Landing updated!",
-            Landing: oldLand
-        }
 
     } catch (error) {
         console.log(error);
