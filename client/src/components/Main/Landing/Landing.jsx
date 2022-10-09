@@ -84,7 +84,7 @@ const Landing = () => {
     // CREATE LANDING
 
     const changeRoute = () => {
-        let path = 'create';
+        let path = 'new';
         navigation(path);
     }
 
@@ -92,27 +92,29 @@ const Landing = () => {
     if (landings) {
         return (
             <>
-                <div>
-                    <h4>Search landings!</h4>
-                    <form onSubmit={handleSubmit}>
-                        <select name="select">
-                            <option value="mass">By mass</option>
-                            <option value="class">By class</option>
-                        </select>
-                        <input id="outlined-basic" label={select} variant="outlined" name="input" />
-                        <button variant="outlined" type="submit">Search</button>
-                    </form>
-                </div>
+                <section style={{display:'flex', flexDirection:'row'}}>
+                    <div style={{margin:'30px'}}>
+                        <h4>Search landings!</h4>
+                        <form onSubmit={handleSubmit}>
+                            <select name="select">
+                                <option value="mass">By mass</option>
+                                <option value="class">By class</option>
+                            </select>
+                            <input id="outlined-basic" label={select} variant="outlined" name="input" />
+                            <button variant="outlined" type="submit">Search</button>
+                        </form>
+                    </div>
 
-                <div>
-                    <h4>Check all landings</h4>
-                    <button variant="outlined" onClick={handleClick}>Landings</button>
-                </div>
+                    <div style={{margin:'30px'}}>
+                        <h4>Check all landings</h4>
+                        <button variant="outlined" onClick={handleClick}>Landings</button>
+                    </div>
 
-                <div>
-                    <h4>Create your own landing!</h4>
-                    <button onClick={changeRoute} variant="outlined" type="submit">Create</button>
-                </div>
+                    <div style={{margin:'30px'}}>
+                        <h4>Create your own landing!</h4>
+                        <button onClick={changeRoute} variant="outlined" type="submit">Create</button>
+                    </div>
+                </section>
 
                 <MapContainer center={[51.505, -0.09]} zoom={4} scrollWheelZoom={true} style={{ width: '100%', height: '500px', marginTop: '30px' }}>
                     <TileLayer
@@ -140,30 +142,30 @@ const Landing = () => {
     }
     else if (filterMap) {
         return (
-            <section>
-            <section>
-                <div>
-                    <h4>Search landings!</h4>
-                    <form onSubmit={handleSubmit}>
-                        <select name="select">
-                            <option value="mass">By weight</option>
-                            <option value="class">By class</option>
-                        </select>
-                        <input id="outlined-basic" label={select} variant="outlined" name="input" />
-                        <button variant="outlined" type="submit">Submit</button>
-                    </form>
-                </div>
+            <>
+                <section>
+                    <div>
+                        <h4>Search landings!</h4>
+                        <form onSubmit={handleSubmit}>
+                            <select name="select">
+                                <option value="mass">By weight</option>
+                                <option value="class">By class</option>
+                            </select>
+                            <input id="outlined-basic" label={select} variant="outlined" name="input" />
+                            <button variant="outlined" type="submit">Submit</button>
+                        </form>
+                    </div>
 
-                <div>
-                    <h4>Check all landings</h4>
-                    <button variant="outlined" onClick={handleClick}>List</button>
-                </div>
+                    <div>
+                        <h4>Check all landings</h4>
+                        <button variant="outlined" onClick={handleClick}>List</button>
+                    </div>
 
-                <div>
-                    <h4>Create your own landing!</h4>
-                    <button onClick={changeRoute} variant="outlined" type="submit">Create</button>
-                </div>
-            </section>
+                    <div>
+                        <h4>Create your own landing!</h4>
+                        <button onClick={changeRoute} variant="outlined" type="submit">Create</button>
+                    </div>
+                </section>
 
                 <MapContainer center={[51.505, -0.09]} zoom={4} scrollWheelZoom={true} style={{ width: '100%', height: '500px', marginTop: '30px' }}>
                     <TileLayer
@@ -186,8 +188,37 @@ const Landing = () => {
                         </Marker>) : null)}
                 </MapContainer>
 
-            </section>
+            </>
         )
+    // } else{
+    //     return(
+    //         <>
+                // <section style={{display:'flex', flexDirection:'row'}}>
+                //     <div style={{margin:'30px'}}>
+                //         <h4>Search landings!</h4>
+                //         <form onSubmit={handleSubmit}>
+                //             <select name="select">
+                //                 <option value="mass">By mass</option>
+                //                 <option value="class">By class</option>
+                //             </select>
+                //             <input id="outlined-basic" label={select} variant="outlined" name="input" />
+                //             <button variant="outlined" type="submit">Search</button>
+                //         </form>
+                //     </div>
+
+                //     <div style={{margin:'30px'}}>
+                //         <h4>Check all landings</h4>
+                //         <button variant="outlined" onClick={handleClick}>Landings</button>
+                //     </div>
+
+                //     <div style={{margin:'30px'}}>
+                //         <h4>Create your own landing!</h4>
+                //         <button onClick={changeRoute} variant="outlined" type="submit">Create</button>
+                //     </div>
+                // </section>
+
+    //         </>
+    //     )
     }
 }
 
