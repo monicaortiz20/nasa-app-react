@@ -11,7 +11,7 @@ landingsApiRouter.get('/astronomy/landings/mass/:mass', landingsApiController.ge
 landingsApiRouter.get('/astronomy/landings/class/:class', landingsApiController.getLandingsByClass)
 landingsApiRouter.post('/astronomy/landings/create', landingsApiController.createNewLanding)
 landingsApiRouter.put('/astronomy/landings/update/:id?', landingsApiController.updateLanding)
-landingsApiRouter.delete('/astronomy/landings/delete/:id?', landingsApiController.deleteLanding)
+landingsApiRouter.delete('/astronomy/landings/delete/:id', landingsApiController.deleteLanding)
 
 
 module.exports= landingsApiRouter;

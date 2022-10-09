@@ -144,7 +144,7 @@ const upDateLandings = async(landing) => {
 //--------- Función Query para el DELETE ----------//
 const deleteLandings = async (landing) => {
     try {
-        let response = await Landing.deleteOne({id:landing.id});
+        let response = await Landing.deleteOne({id:landing});
         console.log("Landing eliminated",response);
         return `Landing with id ${landing.id} has been deleted.`
 
