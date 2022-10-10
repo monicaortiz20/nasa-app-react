@@ -5,7 +5,7 @@ const Footer = () => {
   
     <footer className=" flex-col items-center justify-between p-6 dark:bg-gray-900 sm:flex-row w-full h-16 bg-slate-300 border-t-2 border-white
     fixed left-0 bottom-0 flex justify-center items-center text-white text-2xl">
-    <a href="#" className="text-xl font-bold text-gray-600 transition-colors duration-300 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">Mónica Ortiz</a>
+    <a  className="text-xl font-bold text-gray-600 transition-colors duration-300 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">Mónica Ortiz</a>
     <p className="text-sm text-gray-600 dark:text-gray-300">© Copyright 2022. All Rights Reserved.</p>
     <div className="flex -mx-2">
         <a href="https://www.linkedin.com/in/m%C3%B3nica-ortiz-navajo/" className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="LinkedIn">

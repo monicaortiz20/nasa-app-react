@@ -88,7 +88,7 @@ const CardLanding = (data) => {
                   <input {...register("year")} placeholder="Year" type="date" name="year" />
                   <input {...register("reclat")} placeholder="Latitude*" label="Latitude" name="reclat" required />
                   <input {...register("reclong")} placeholder="Longitude*" label="Longitude" name="reclong" required />
-                  <button type="submit">Edit</button>
+                  <button type="submit" className="w-full px-2 py-1 bg-slate-400/80 hover:bg-cyan-700  text-slate-100 rounded-lg">Edit</button>
                 </form>
               </div>
             )}
