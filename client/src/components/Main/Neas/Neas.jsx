@@ -36,12 +36,12 @@ const changeRoute = () => {
 
   }
   return (
-    <section>
-    <h3>HERE THEY ARE!</h3>
+    <section className="flex flex-col items-center justify-center">
+    <h1 className="text-black text-center font-semibold text-xxl underline my-6 transition hover:text-cyan-700"> HERE THEY ARE!</h1>
 
     <div style={{margin:'30px'}}>
       <h4>Create your own Nea!</h4>
-      <button onClick={changeRoute} type="submit">Create</button>      
+      <button onClick={changeRoute} className="w-80 my-2 px-2 py-1 bg-slate-400/80 hover:bg-cyan-900 text-slate-100 rounded-lg" type="submit">Create</button>      
     </div>
     {allNeas.length !== 0 ? allNeas.map((data, i) => <CardNeas data={data} key={i} remove={() => deleteNea(i) }/>)
       : null}

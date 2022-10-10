@@ -59,7 +59,7 @@ const ListLanding = () => {
   return (
     <section>
       {/* //cogemos datos del fetch y los pintamos */}
-      <h3>HERE THEY ARE!</h3>
+      <h3 className="text-black text-center font-semibold text-xxl underline my-6 transition hover:text-cyan-700">HERE THEY ARE!</h3>
       {allLandings.length !== 0 ? allLandings.map((data, i) => <CardLanding data={data} key={i} remove={()=>deleteLanding(i)}/>)
         : null}
     </section>

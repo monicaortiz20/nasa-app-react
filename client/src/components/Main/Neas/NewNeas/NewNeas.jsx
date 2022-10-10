@@ -30,15 +30,15 @@ const NewNeas = () => {
 
   return (
     <div>
-      <h2>CREATE YOUR OWN!</h2>
+      <h2 className="text-black text-center font-semibold text-xxl underline my-6 transition hover:text-cyan-700">CREATE YOUR OWN!</h2>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <form onSubmit={handleSubmit(createNewNea)}>
-          <input {...register("designation")} placeholder="designation" label="designation" name="designation" required />
+        <form onSubmit={handleSubmit(createNewNea)} className={"flex items-center content-around justify-center flex-col justify-items-center gap-4"} >
+          <input {...register("designation")} placeholder="Designation" label="designation" name="designation" required />
           <input {...register("id")} placeholder="ID" label="id" name="id" required />
-          <input {...register("discovery_date")} placeholder="discovery date" label="discovery_date" name="discovery_date" required />
+          <input {...register("discovery_date")} placeholder="Discovery date" label="discovery_date" name="discovery_date" required />
           <input {...register("period_yr")} placeholder="Orbit period" label="Orbit period" name="period_yr"/>
           <input {...register("orbit_class")} placeholder="Orbit class" label="Orbit class" name="orbit_class"/>
-          <button size="small" type="submit">Create</button>
+          <button size="small" className="w-60 my-2 px-2 py-2 bg-slate-400/80 hover:bg-cyan-700 text-slate-100 rounded-lg" type="submit">Create</button>
         </form>
       </div>
     </div>

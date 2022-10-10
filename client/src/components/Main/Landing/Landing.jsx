@@ -92,30 +92,32 @@ const Landing = () => {
     if (landings) {
         return (
             <>
-                <section style={{display:'flex', flexDirection:'row'}}>
-                    <div style={{margin:'30px'}}>
-                        <h4>Search landings!</h4>
-                        <form onSubmit={handleSubmit}>
+            <div className='font-poppins hidden lg:flex justify-between px-24 py-4 items-center select-none'>
+                <section>
+                    <h4 className="text-black text-center font-semibold text-xxl underline my-6 transition hover:text-cyan-700">Search landings!</h4>
+                    <div className='flex items-center gap-2 text-l group'>
+                        <form onSubmit={handleSubmit} className={"flex items-center content-around justify-center flex-row justify-items-center gap-4"}>
                             <select name="select">
                                 <option value="mass">By mass</option>
                                 <option value="class">By class</option>
                             </select>
                             <input id="outlined-basic" label={select} variant="outlined" name="input" />
-                            <button variant="outlined" type="submit">Search</button>
+                            <button className="w-40 px-2 py-1 bg-slate-400/80 hover:bg-cyan-700  text-slate-100 rounded-lg" type="submit">Search</button>
                         </form>
                     </div>
-
-                    <div style={{margin:'30px'}}>
-                        <h4>Check all landings</h4>
-                        <button variant="outlined" onClick={handleClick}>Landings</button>
-                    </div>
-
-                    <div style={{margin:'30px'}}>
-                        <h4>Create your own landing!</h4>
-                        <button onClick={changeRoute} variant="outlined" type="submit">Create</button>
-                    </div>
                 </section>
+                    <section className='flex gap-14 text-l items-center'>
+                        <div className="mx-8">
+                            <h4 className="text-black text-center font-semibold text-l underline my-6 transition hover:text-cyan-700">Check all landings</h4>
+                            <button className="w-full px-2 py-1 bg-slate-400/80 hover:bg-cyan-700  text-slate-100 rounded-lg" onClick={handleClick}>Landings</button>
+                        </div>
 
+                        <div className="mx-8">
+                            <h4 className="text-black text-center font-semibold text-l underline my-6 transition hover:text-cyan-700">Create your own landing!</h4>
+                            <button onClick={changeRoute} className="w-full px-2 py-1 bg-slate-400/80 hover:bg-cyan-700  text-slate-100 rounded-lg" type="submit">Create</button>
+                        </div>
+                    </section>
+            </div>
                 <MapContainer center={[51.505, -0.09]} zoom={4} scrollWheelZoom={true} style={{ width: '100%', height: '500px', marginTop: '30px' }}>
                     <TileLayer
                         attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>"
@@ -143,29 +145,32 @@ const Landing = () => {
     else if (filterMap) {
         return (
             <>
+                           <div className='font-poppins hidden lg:flex justify-between px-24 py-4 items-center select-none'>
                 <section>
-                    <div>
-                        <h4>Search landings!</h4>
-                        <form onSubmit={handleSubmit}>
+                    <h4 className="text-black text-center font-semibold text-xxl underline my-6 transition hover:text-cyan-700">Search landings!</h4>
+                    <div className='flex items-center gap-2 text-l group'>
+                        <form onSubmit={handleSubmit} className={"flex items-center content-around justify-center flex-row justify-items-center gap-4"}>
                             <select name="select">
-                                <option value="mass">By weight</option>
+                                <option value="mass">By mass</option>
                                 <option value="class">By class</option>
                             </select>
                             <input id="outlined-basic" label={select} variant="outlined" name="input" />
-                            <button variant="outlined" type="submit">Submit</button>
+                            <button className="w-40 px-2 py-1 bg-slate-400/80 hover:bg-cyan-700  text-slate-100 rounded-lg" type="submit">Search</button>
                         </form>
                     </div>
-
-                    <div>
-                        <h4>Check all landings</h4>
-                        <button variant="outlined" onClick={handleClick}>List</button>
-                    </div>
-
-                    <div>
-                        <h4>Create your own landing!</h4>
-                        <button onClick={changeRoute} variant="outlined" type="submit">Create</button>
-                    </div>
                 </section>
+                    <section className='flex gap-14 text-l items-center'>
+                        <div className="mx-8">
+                            <h4 className="text-black text-center font-semibold text-l underline my-6 transition hover:text-cyan-700">Check all landings</h4>
+                            <button className="w-full px-2 py-1 bg-slate-400/80 hover:bg-cyan-700  text-slate-100 rounded-lg" onClick={handleClick}>Landings</button>
+                        </div>
+
+                        <div className="mx-8">
+                            <h4 className="text-black text-center font-semibold text-l underline my-6 transition hover:text-cyan-700">Create your own landing!</h4>
+                            <button onClick={changeRoute} className="w-full px-2 py-1 bg-slate-400/80 hover:bg-cyan-700  text-slate-100 rounded-lg" type="submit">Create</button>
+                        </div>
+                    </section>
+            </div>
 
                 <MapContainer center={[51.505, -0.09]} zoom={4} scrollWheelZoom={true} style={{ width: '100%', height: '500px', marginTop: '30px' }}>
                     <TileLayer
@@ -190,35 +195,6 @@ const Landing = () => {
 
             </>
         )
-    // } else{
-    //     return(
-    //         <>
-                // <section style={{display:'flex', flexDirection:'row'}}>
-                //     <div style={{margin:'30px'}}>
-                //         <h4>Search landings!</h4>
-                //         <form onSubmit={handleSubmit}>
-                //             <select name="select">
-                //                 <option value="mass">By mass</option>
-                //                 <option value="class">By class</option>
-                //             </select>
-                //             <input id="outlined-basic" label={select} variant="outlined" name="input" />
-                //             <button variant="outlined" type="submit">Search</button>
-                //         </form>
-                //     </div>
-
-                //     <div style={{margin:'30px'}}>
-                //         <h4>Check all landings</h4>
-                //         <button variant="outlined" onClick={handleClick}>Landings</button>
-                //     </div>
-
-                //     <div style={{margin:'30px'}}>
-                //         <h4>Create your own landing!</h4>
-                //         <button onClick={changeRoute} variant="outlined" type="submit">Create</button>
-                //     </div>
-                // </section>
-
-    //         </>
-    //     )
     }
 }
 
