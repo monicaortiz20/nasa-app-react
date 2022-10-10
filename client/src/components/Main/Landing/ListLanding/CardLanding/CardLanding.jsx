@@ -8,7 +8,7 @@ import meteo1 from '../../../../../assets/gif/meteo.gif';
 import meteo2 from '../../../../../assets/gif/meteo2.gif';
 import meteo3 from '../../../../../assets/gif/meteo3.gif';
 import meteo4 from '../../../../../assets/gif/meteosimp.gif';
-import meteo5 from '../../../../../assets/gif/meteo5.gif';;
+import meteo5 from '../../../../../assets/gif/meteo5.gif';
 
 
 
@@ -66,8 +66,7 @@ const CardLanding = (data) => {
     <>
     <section className="flex flex-col items-center justify-items-center">
       <a href="#" className="flex flex-col justify-items-center mx-4 bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl lg:px-6 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-5">
-        <img src={randomGifs[0]} className="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" alt="asteroids" />
-        <div className="flex flex-col justify-between p-4 leading-normal">
+      <img src={randomGifs[0]} className="object-cover w-full h-[100%] rounded-t-lg md:h-auto md:w-60  md:rounded-l-lg  md:rounded-b-lg "  alt=""/>        <div className="flex flex-col justify-between p-4 leading-normal">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{landing.name}</h5>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">ID: {landing.id}</p>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{landing.nametype}</p>
@@ -98,45 +97,6 @@ const CardLanding = (data) => {
         </div>
       </a>
 
-
-
-
-
-
-
-
-
-      {/* <section>
-          <div>
-            <h3>{landing.name}</h3>
-            <p>ID: {landing.id}</p>
-            <p>Nametype: {landing.nametype}</p>
-            <p>Reclass: {landing.recclass}</p>
-            <p>Mass: {landing.mass}</p>
-            <p>Fall: {landing.fall}</p>
-            <p>Year: {landing.year}</p>
-            <p>Reclat: {landing.reclat}</p>
-            <p>Reclong: {landing.reclong}</p>
-            <button onClick={deleteLanding}>Delete</button>
-          </div>
-        </section>
-        <Popup trigger={<button>Edit</button>} position="bottom left">
-          {close => (
-            <div>
-              <form onSubmit={handleSubmit(editLanding)}>
-                <input {...register("name")} placeholder="Name*" label="Name" name="name" required />
-                <input {...register("id")} placeholder="ID*" label="ID" name="id" required />
-                <input {...register("recclass")} placeholder="Recclass" label="Class" name="recclass" />
-                <input {...register("mass")} placeholder="Mass" label="Weight" name="mass" />
-                <input {...register("year")} placeholder="Year" type="date" name="year" />
-                <input {...register("reclat")} placeholder="Latitude*" label="Latitude" name="reclat" required />
-                <input {...register("reclong")} placeholder="Longitude*" label="Longitude" name="reclong" required />
-                <button type="submit">Edit</button>
-              </form>
-            </div>
-          )}
-
-        </Popup> */}
         </section>
     </>
   )
