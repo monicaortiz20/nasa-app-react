@@ -4,11 +4,13 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { useForm } from "react-hook-form";
 
-import meteo1 from '../../../../../assets/img/asteroide1';
-import meteo2 from '../../../../../assets/img/asteroide2';
-import meteo3 from '../../../../../assets/img/asteroide3';
-import meteo4 from '../../../../../assets/img/asteroide4';
-import meteo5 from '../../../../../assets/img/meteorito';
+
+
+import meteo1 from '../../../../../assets/img/asteroide1.png';
+import meteo2 from '../../../../../assets/img/asteroide2.png';
+import meteo3 from '../../../../../assets/img/asteroide3.png';
+import meteo4 from '../../../../../assets/img/asteroide4.png';
+import meteo5 from '../../../../../assets/img/meteorito.png';
 
 
 
@@ -64,9 +66,10 @@ const CardLanding = (data) => {
 
   return (
     <>
-    <section className="flex flex-col items-center justify-items-center">
-      <a href="#" className="flex flex-col justify-items-center mx-4 bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl lg:px-6 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-5">
-      <img src={randomGifs[0]} className="object-cover w-full h-[100%] rounded-t-lg md:h-auto md:w-60  md:rounded-l-lg  md:rounded-b-lg "  alt=""/>        <div className="flex flex-col justify-between p-4 leading-normal">
+    <section className="flex flex-col flex-wrap justify-center content-center  items-center justify-items-center my-3">
+    <a href="#" className="flex flex-col items-center justify-items-center mx-3 bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl lg:px-5   hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+      <img src={randomGifs[0]} className="object-cover w-full h-[100%] rounded-t-lg md:h-auto md:w-60  md:rounded-l-lg  md:rounded-b-lg "  alt=""/>        
+      <div className="flex flex-col justify-between p-4 leading-normal">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{landing.name}</h5>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">ID: {landing.id}</p>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{landing.nametype}</p>
