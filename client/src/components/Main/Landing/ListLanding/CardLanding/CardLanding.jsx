@@ -4,11 +4,11 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { useForm } from "react-hook-form";
 
-import meteo1 from '../../../../../assets/gif/meteo.gif';
-import meteo2 from '../../../../../assets/gif/meteo2.gif';
-import meteo3 from '../../../../../assets/gif/meteo3.gif';
-import meteo4 from '../../../../../assets/gif/meteosimp.gif';
-import meteo5 from '../../../../../assets/gif/meteo5.gif';
+import meteo1 from '../../../../../assets/img/asteroide1';
+import meteo2 from '../../../../../assets/img/asteroide2';
+import meteo3 from '../../../../../assets/img/asteroide3';
+import meteo4 from '../../../../../assets/img/asteroide4';
+import meteo5 from '../../../../../assets/img/meteorito';
 
 
 
