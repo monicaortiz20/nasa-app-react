@@ -4,11 +4,11 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { useForm } from "react-hook-form";
 
-import meteo1 from '../../../../assets/gif/meteo.gif';
-import meteo2 from '../../../../assets/gif/meteo2.gif';
-import meteo3 from '../../../../assets/gif/meteo3.gif';
-import meteo4 from '../../../../assets/gif/meteosimp.gif';
-import meteo5 from '../../../../assets/gif/meteo5.gif';
+import meteo1 from '../../../../assets/img/asteroide1.png';
+import meteo2 from '../../../../assets/img/asteroide2.png';
+import meteo3 from '../../../../assets/img/asteroide3.png';
+import meteo4 from '../../../../assets/img/asteroide4.png';
+import meteo5 from '../../../../assets/img/asteroides.png';
 
 const CardNeas = (data) => {
   const nea = data.data
@@ -52,7 +52,7 @@ const CardNeas = (data) => {
   return (
      <>
       <section className="flex flex-col items-center justify-items-center">
-        <a className="flex flex-col justify-items-center mx-4 bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl lg:px-6 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-5">
+      <a href="#" className="flex flex-col items-center justify-items-center mx-3 bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl lg:px-5   hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
           <img src={randomGifs[0]} className="object-cover w-full h-[100%] rounded-t-lg md:h-auto md:w-60  md:rounded-l-lg  md:rounded-b-lg" />        <div className="flex flex-col justify-between p-4 leading-normal">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{nea.designation}</h5>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Discovery Date: {nea.discovery_date}</p>

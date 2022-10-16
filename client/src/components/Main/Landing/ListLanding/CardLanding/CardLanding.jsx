@@ -6,11 +6,11 @@ import { useForm } from "react-hook-form";
 
 
 
-import meteo1 from '../../../../../assets/img/asteroide1.png';
-import meteo2 from '../../../../../assets/img/asteroide2.png';
-import meteo3 from '../../../../../assets/img/asteroide3.png';
-import meteo4 from '../../../../../assets/img/asteroide4.png';
-import meteo5 from '../../../../../assets/img/meteorito.png';
+import meteo1 from '../../../../../assets/img/land1.png';
+import meteo2 from '../../../../../assets/img/lan2.png';
+import meteo3 from '../../../../../assets/img/land3.png';
+import meteo4 from '../../../../../assets/img/land4.png';
+import meteo5 from '../../../../../assets/img/asteroide.png';
 
 
 
